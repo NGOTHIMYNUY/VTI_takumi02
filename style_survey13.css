@@ -1,0 +1,78 @@
+*{
+    padding-bottom: 9px;
+    margin-bottom: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  
+} 
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: conic-gradient(at left bottom, rgb(240, 171, 252), rgb(74, 222, 128), rgb(190, 18, 60));
+    background-size: cover;
+    border-image: stretch;
+    color: rgb(11, 11, 12);   
+  
+}
+.form-title{
+    border: 1px;
+    padding: 10px;
+    background-color: lightgray;
+    text-align: center;
+    font-size: 26px;
+    color: rgb(157, 48, 154);
+    background-color: rgb(238, 204, 231);
+    border-top-style:solid 1px white;
+    border-right-style:solid;
+    border-bottom-style:solid 30px white;
+    border-left-style:solid;
+    border-radius: 9px;  
+} 
+
+.container{
+    width: 40%;
+    background: rgba(141, 132, 132, 0.5);
+    padding:28px ;
+    margin: 0 28px;
+    border-radius: 10px;
+    box-shadow: inset -2px 2px white;
+    border-radius: 35px;
+    border-radius: 28px;
+    border-radius: 28px;
+    background: linear-gradient(145deg, #ad80b1, #926c95);
+    box-shadow:  10px 10px 20px #8b678e,-10px -10px 20px #b989bc;
+}
+
+label,span,input{
+    font-weight: 800;
+    color: rgb(29, 31, 31);
+}
+
+label{
+    text-align: center;
+}
+.p:hover{
+    animation: ani 8s linear infinite;
+    border: none;
+}
+.p:active {
+    background: linear-gradient(32deg,#031b26,#88034e,#5e5505,#01131c);
+   }
+.p{
+    background-color: rgb(111, 14, 111);
+    color: aliceblue;  
+    cursor: pointer; 
+}
+.submit-box{
+    text-align: center;
+    padding: 25px ;
+    
+}
+.text{
+    width: 100%;
+}
+.p,text{
+    padding: 10px;
+}
