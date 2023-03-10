@@ -1,0 +1,26 @@
+       
+.sub-paragraph{
+    padding-left: 20px;
+}
+a:hover{
+    color: blue;
+}
+h1{
+    font-size: 35px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+h2{
+    font-family: "Open Sans", sans-serif; 
+    font-size: 24px;
+    font-weight: bold;
+}
+div{
+    color: #333;
+}
+a{
+    text-decoration: underline; 
+}
+body{
+    background-color: rgb(180, 194, 173);
+}

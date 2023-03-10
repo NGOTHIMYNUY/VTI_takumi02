@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <link rel="stylesheet" href="style_baitap14_3.css">
+        <style>
+            body{
+                background-color: #FDF5E6;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Phần đầu -->
+        <h1>14章異常レベルとトランザクション分離レベル</h1>
+        <!-- Phần thân -->
+        <div class="paragraph1">
+            <h2>14.1異常レベル</h2>
+            <p>
+                <p>複数のトランザクションが同時に実行された場合、データの矛盾が起きえる。矛盾の種類は以下の通り。これらは必ず起こるわけではなく、トランザクションに設定した分離レベルによって、発生を抑制することができる。</p>
+                    <strong class="note">ダーティリード</strong>
+                    <div class="sub-paragraph">同時に実行されている他のトランザクションが更新中の（未だコミットしていない）データを読み込んでしまう。</div>
+                    <strong class="note">反復不能読み取り</strong>
+                    <div class="sub-paragraph">一度読み込んだデータを再度読み込んだ際に違ったデータを読み込んでしまう。他のトランザクションの更新に対するコミット前後のデータを読み込むことで発生する。</div>
+                    <strong class="note">ファントムリード</strong>
+                    <div class="sub-paragraph">一度検索した条件と同じ検索を再度行った際に、レコードが増えたり減ったりしてしまう。他のトランザクションの追加、削除に対するコミット前後の検索を行うことで発生する。</div>
+                </p>
+            </p>
+        </div>
+        
+        <div clas="paragraph2">
+            <h2>14.2トランザクション分離レベル</h2>
+            <p>
+                <strong class="note">表14.1 トランザクション分離レベルの一覧</strong>
+                <div>
+                    <table >
+                        <tr>
+                            <th>分離レベル</th>
+                            <th>ダーティリード</th>
+                            <th>反復不能読み取り</th>
+                            <th>ファントムリード</th>
+                        </tr>
+                        <tr>
+                            <td class="td">READ UNCOMMITED</td>
+                            <td>可能性あり</td>
+                            <td>可能性あり</td>
+                            <td>可能性あり</td>
+                        </tr>
+                        <tr>
+                            <td class="td">READ COMMITED</td> 
+                            <td>安全</td>
+                            <td>可能性あり</td>
+                            <td>可能性あり</td>
+                        </tr>
+                        <tr>
+                            <td class="td">REPEATABLE READ</td>
+                            <td>安全</td>
+                            <td>安全</td>
+                            <td>可能性あり</td>
+                        </tr>
+                        <tr>
+                            <td class="td">SERIALIZABLE</td>
+                            <td>安全</td>
+                            <td>安全</td>
+                            <td>安全</td>
+                        </tr>
+                    </table>
+                </div>
+                <p>※PostgreSQLはREAD UNCOMMITEDはREAD COMMITEDとして処理される。</p>
+            </p>
+        </div>
+        
+        <div class="paragraph3">
+            <h2>14.3参考</h2>
+            <p class="a">
+                <a href="http://www.postgresql.jp/document/9.1/html/transaction-iso.html">http://www.postgresql.jp/document/9.1/html/transaction-iso.html</a>
+                <br>
+                <a href="http://www.postgresql.jp/document/9.1/html/sql-set-transaction.html ">http://www.postgresql.jp/document/9.1/html/sql-set-transaction.html </a>
+            </p>
+        </div>
+        
+    </body>
+
+    <hr>
+        <p>Copyright(C) XXX</p>
+   
+
+</html>

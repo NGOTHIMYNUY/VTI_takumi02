@@ -1,0 +1,26 @@
+h1:hover{
+    color: #8B4513;
+}
+h2{
+    color: #CD853F;
+}
+table, td, th {
+    border: 1.5px solid rgb(93, 73, 73);
+    text-align: center;
+}
+
+.sub-paragraph {
+    padding-left: 40px;
+}
+.note{
+    color: rgb(111, 75, 75);
+}
+.td{
+    text-align: left;
+}
+a:hover{
+    color: rgb(143, 143, 153);
+}
+a{
+    color: rgb(56, 56, 99);
+}
